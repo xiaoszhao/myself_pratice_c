@@ -1348,7 +1348,50 @@
 //	}
 //}
 //
-
+//#include <stdio.h>
+//int main()
+//{
+//	printf("%zd\n", sizeof(char *));
+//	printf("%zd\n", sizeof(int *));
+//	printf("%zd\n", sizeof(float *));  ////¶¼ÊÇ4
+//	printf("%zd\n", sizeof(long int *));
+//	printf("%zd\n", sizeof(double *));
+//	return 0;
+//}
+ 
+#include <iostream>
+using namespace std;
+int main()
+{
+	float num=0;
+	float sum=0;
+	float Grade[5][5];
+	int i = 0;
+	int j = 0;
+	for (i=0; i < 5; i++)
+	{
+		for (j=0; j < 5; j++)
+		{
+			cin >> num;
+			Grade[i][j] = num;
+		}
+	}
+	for (i=0; i < 5; i++)
+	{
+		for (j = 0; j < 5; j++)
+		{
+			sum += Grade[i][j];
+			printf("%.1f ", Grade[i][j]);
+			if (j == 4)
+			{
+				printf("%.1f\n", sum);
+				sum = 0;
+			}
+		}
+				
+	}
+	return 0;
+}
 
 
 

@@ -1359,41 +1359,102 @@
 //	return 0;
 //}
  
-#include <iostream>
-using namespace std;
-int main()
-{
-	float num=0;
-	float sum=0;
-	float Grade[5][5];
-	int i = 0;
-	int j = 0;
-	for (i=0; i < 5; i++)
-	{
-		for (j=0; j < 5; j++)
-		{
-			cin >> num;
-			Grade[i][j] = num;
-		}
-	}
-	for (i=0; i < 5; i++)
-	{
-		for (j = 0; j < 5; j++)
-		{
-			sum += Grade[i][j];
-			printf("%.1f ", Grade[i][j]);
-			if (j == 4)
-			{
-				printf("%.1f\n", sum);
-				sum = 0;
-			}
-		}
-				
-	}
-	return 0;
-}
+//
 
+//#include <stdio.h>
+//int main()
+//{
+//	for (int i = 1; i <= 100; i++)
+//	{
+//		if (i % 3 == 0)
+//			printf("%d\n", i);
+//	}
+//	return 0;
+//}
 
+//素数打印
 
+//#include <stdio.h>
+//#include <stdbool.h>
+//bool idPrime(int num)
+//{
+//	//1不是素数
+//	if (num <= 1)
+//	{
+//		return false;
+//	}
+//	for (int i = 2; i * i <= num; i++)
+//	{
+//		if (num % i == 0)
+//		{
+//			return false;
+//		}
+//	}
+//	return true;
+//}
+//
+//int main()
+//{
+//	int num;
+//	scanf_s("%4d", &num);
+//	for (int i = 100; i <= num; i++)
+//	{
+//		if (idPrime(i))
+//		{
+//			printf("%d ", i);
+//		}
+//		else
+//			continue;
+//	}
+//
+//	return 0;
+//}
+//判断闰年是否
+//#include <stdio.h>
+//void Serchyear(int year)
+//{
+//	if (year % 4 == 0)
+//	{
+//		if (year % 100)
+//		{
+//			printf("%d", year);
+//		}
+//	}
+//	if (year % 400 == 0)
+//	{
+//		printf("%d", year);
+//	}
+//}
+//int main()
+//{
+//	for (int i = 1000; i <= 2000; i++)
+//	{
+//		Serchyear(i);
+//	}
+//	return 0;
+//}
 
-
+//找出两个数的最大公因数
+//#include<stdio.h>
+//int main()
+//{
+//    int m = 0;
+//    int n = 0;
+//    scanf_s("%d%d", &m, &n);
+//    int min = 0;
+//    if (m > n)
+//        min = n;
+//    else
+//        min = m;     //假设最大公约数就是m和n的较小值
+//    while (1)
+//    {
+//        if (m % min == 0 && n % min == 0)
+//        {
+//            printf("最大公约数就是：%d\n", min);
+//            break;
+//        }
+//        min--;
+//    }
+//    return 0;
+//
+//}

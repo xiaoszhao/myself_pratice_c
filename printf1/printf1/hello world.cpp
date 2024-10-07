@@ -1478,3 +1478,24 @@
 //	return 0;
 //
 //}
+
+//#include <stdio.h>
+//int main()
+//{
+//	int j = 0;
+//	int arr[10];
+//	int max = 0;
+//	for (int k = 0; k < 10; k++)
+//	{
+//		scanf_s("%d",& arr[k]);
+//	}
+//	for (int i = 0; i < 10; i++)
+//	{
+//		if (arr[i] > max)
+//		{
+//			max = arr[i];
+//		}
+//	}
+//	printf("%d\n", max);
+//	return 0;
+//}

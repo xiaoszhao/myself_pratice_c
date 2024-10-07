@@ -7,9 +7,6 @@
       "RelativeMoniker": "D:0:0:{B2957A35-3BE8-40EF-88E8-CF47358AC2DF}|printf1\\printf1.vcxproj|solutionrelative:printf1\\hello world.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|E:\\\u8C37\u6B4C\u4E0B\u8F7D\\snippet.cpp||{D0E1A5C6-B359-4E41-9B60-3365922C2A22}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|D:\\\u4ED3\u5E93code\\lianxi.c\\printf1\\CppProperties.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:CppProperties.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -21,7 +18,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -34,15 +31,6 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "snippet.cpp",
-              "DocumentMoniker": "E:\\\u8C37\u6B4C\u4E0B\u8F7D\\snippet.cpp",
-              "ToolTip": "E:\\\u8C37\u6B4C\u4E0B\u8F7D\\snippet.cpp",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
-              "WhenOpened": "2024-09-30T04:45:52.777Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
               "Title": "CppProperties.json",
               "DocumentMoniker": "D:\\\u4ED3\u5E93code\\lianxi.c\\printf1\\CppProperties.json",
               "RelativeDocumentMoniker": "CppProperties.json",
@@ -58,9 +46,9 @@
               "Title": "hello world.cpp",
               "DocumentMoniker": "D:\\\u4ED3\u5E93code\\lianxi.c\\printf1\\printf1\\hello world.cpp",
               "RelativeDocumentMoniker": "printf1\\hello world.cpp",
-              "ToolTip": "D:\\\u4ED3\u5E93code\\lianxi.c\\printf1\\printf1\\hello world.cpp",
-              "RelativeToolTip": "printf1\\hello world.cpp",
-              "ViewState": "AgIAALEFAAAAAAAAAAAYwLYFAAANAAAAAAAAAA==",
+              "ToolTip": "D:\\\u4ED3\u5E93code\\lianxi.c\\printf1\\printf1\\hello world.cpp*",
+              "RelativeToolTip": "printf1\\hello world.cpp*",
+              "ViewState": "AgIAAMAFAAAAAAAAAAAiwNAFAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-22T10:14:15.496Z",
               "EditorCaption": ""

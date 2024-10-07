@@ -1458,3 +1458,23 @@
 //    return 0;
 //
 //}
+
+
+//forÓï¾ä99³Ë·¨¿Ú¾÷
+
+//#include <stdio.h>
+//int main()
+//{
+//	int sum;
+//	for (int i = 1; i <= 9; i++)
+//	{
+//		for (int j = 1; j <= 9; j++)
+//		{
+//			sum = i * j;
+//			printf("%d X %d = %d\n", i, j, sum);
+//			sum = 0;
+//		}
+//	}
+//	return 0;
+//
+//}

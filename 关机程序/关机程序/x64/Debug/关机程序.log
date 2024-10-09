@@ -1,0 +1,6 @@
+﻿  close_main.cpp
+D:\仓库code\lianxi.c\关机程序\close_main.cpp(11,11): warning C4477: “scanf_s”: 格式字符串“%s”需要类型“unsigned int”的参数，但可变参数 2 拥有了类型“size_t”
+      D:\仓库code\lianxi.c\关机程序\close_main.cpp(11,11):
+      此参数用作缓冲区大小
+  
+  关机程序.vcxproj -> D:\仓库code\lianxi.c\关机程序\x64\Debug\关机程序.exe

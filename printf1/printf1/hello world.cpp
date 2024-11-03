@@ -1500,23 +1500,96 @@
 //	return 0;
 //}
 //函数线帧测试
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-int  Add(int x, int y)
-{
-	int z = 0;
-	z = x + y;
-	return z;
-}
-int main()
-{
-	int a = 10;
-	int b = 20;
-	int c = 0;
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//int  Add(int x, int y)
+//{
+//	int z = 0;
+//	z = x + y;
+//	return z;
+//}
+//int main()
+//{
+//	int a = 10;
+//	int b = 20;
+//	int c = 0;
+//
+//	c = Add(a, b);
+//
+//	printf("%d\n", c);
+//
+//	return 0;
+//}
 
-	c = Add(a, b);
 
-	printf("%d\n", c);
+//操作符
+//#include <stdio.h>
+//int main()
+//{
+//	int a = 5/2;
+//	double b = 5.0 / 2;
+//	printf("%d\n", a);
+//	printf("%lf\n", b);
+//	return 0;
+//
+//}
+//#include <stdio.h>
+//int main()
+//{
+//	int a = 5 % 2;
+//	printf("%d\n", a);
+//}
+//#include <stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	int b = a << 2;   //左移
+//	int c = a >> 2;   //右移 
+//	printf("%d\n", b);
+//	printf("%d\n", c);
+//	return 0;
+//}
+//int main()
+//{
+//	int a = 10;
+//	//正数的原码、反码、补码都是相同的
+//	//整形占4个字节（32bit)
+//	//00000000000000000000000000001010 -原码
+//	//00000000000000000000000000001010 -反码
+//	//00000000000000000000000000001010 -补码
+//
+//	int b = -10;
+//	//负数的原码按照一个数的正负，直接写出它的二进制就是原码
+//	//负数的反码、补码需要计算
+//	//10000000000000000000000000001010 -原码
+//	//11111111111111111111111111110101 -反码
+//	//11111111111111111111111111110110 -补码
+//}
+//#include <stdio.h>
+//int main()
+//{
+//	int a = -10;
+//	int b = a << 1;   //左移一位
+//	printf("%d\n", b);
+//	return 0;
+//}
+//#include <stdio.h>
+//int main()
+//{
+//	int a = -1;
+//	int b = a >> 1;   //右移一位
+//	printf("%d\n", b);
+//	return 0;
+//}
 
-	return 0;
-}
+//#include <stdio.h>
+//int main()
+//{
+//	int a = 3;
+//	int b = -5;
+//	int c = a ^ b;
+//	//内存中补码进行计算
+//	printf("%d\n", c);
+//	return 0;
+//}
+

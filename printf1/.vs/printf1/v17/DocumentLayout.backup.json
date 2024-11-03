@@ -13,7 +13,7 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 89,
+          "DockedWidth": 176,
           "SelectedChildIndex": 2,
           "Children": [
             {
@@ -30,9 +30,9 @@
               "Title": "hello world.cpp",
               "DocumentMoniker": "D:\\\u4ED3\u5E93code\\lianxi.c\\printf1\\printf1\\hello world.cpp",
               "RelativeDocumentMoniker": "printf1\\hello world.cpp",
-              "ToolTip": "D:\\\u4ED3\u5E93code\\lianxi.c\\printf1\\printf1\\hello world.cpp",
-              "RelativeToolTip": "printf1\\hello world.cpp",
-              "ViewState": "AgIAANgFAAAAAAAAAAAAANwFAAADAAAAAAAAAA==",
+              "ToolTip": "D:\\\u4ED3\u5E93code\\lianxi.c\\printf1\\printf1\\hello world.cpp*",
+              "RelativeToolTip": "printf1\\hello world.cpp*",
+              "ViewState": "AgIAAC0GAAAAAAAAAAAAADUGAAAPAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000677|",
               "WhenOpened": "2024-09-22T10:14:15.496Z",
               "EditorCaption": ""

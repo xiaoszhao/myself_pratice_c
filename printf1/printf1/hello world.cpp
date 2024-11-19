@@ -1593,3 +1593,486 @@
 //	return 0;
 //}
 
+//#include <stdio.h>
+//
+//int main()
+//{
+//	int a = 0x11223344;
+//	int* pa = &a;
+//	char* pc = (char*) & a;
+//	float* pd = (float*)&a;
+//	printf("%p\n", pa);
+//	printf("%p\n", pa+1);
+//	printf("%p\n", pc);
+//	printf("%p\n", pc+1);
+//	printf("%p\n", pd);
+//	printf("%p\n", pd + 1);
+//
+//	return 0;
+//
+//}
+//#include<stdio.h>
+//#define COUT 5
+//float arr[COUT];
+//
+//int main()
+//{
+//	float* p;
+//	for (p = &arr[0];p<&arr[COUT]; )
+//	{
+//		*p++;
+//	}
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 10;
+//	int* pa = &a;
+//	*pa = 20;
+//	printf("%d\n", a);
+//	return 0;
+//}
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[5] = { 1,2,3,4,5 };
+//	int a = 1;
+//	int b = 2;
+//	int c = 3;
+//	int d = 4;
+//	int e = 5;
+//	int* arr[5] = { &a,&b,&c,&d,&e };
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a[] = { 1,2,3,4 };
+//	int b[] = { 2,3,4,5 };
+//	int c[] = { 3,4,5,6 };
+//	int* arr[3] = { a,b,c };
+//	int i = 0;
+//	for (i = 0; i < 3; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < 4; j++)
+//		{
+//			printf("%d", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+//struct Stu
+//{
+//	//结构体成员
+//	char name;//名字
+//	int age;//年龄
+//	char sex[10];//性别
+//	float score;//成绩
+//};
+//
+//int main()
+//{
+//	struct Stu s1, s2, s3;
+//	return 0;
+//}
+//#include<stdio.h>
+//
+//struct Book
+//{
+//    int money;
+//    char name[20];
+//};
+//
+//int main()
+//{
+//    struct Book s1 = { 20,"Tom and Jerry" };
+//    struct Book s2 = { 30,"YOU and I" };
+//
+//    printf("%d %s \n%d %s\n", s1.money, s1.name, s2.money, s2.name);
+//    return 0;
+//}
+
+//#include <stdio.h>
+//
+//struct S
+//{
+//	int a;
+//	char c;
+//};
+//
+//struct P
+//{
+//	double d;
+//	struct S s;
+//	float f;
+//};
+//
+//void Print1(struct P sp)
+//{
+//	printf("%d %c\n", sp.s.a, sp.s.c);
+//}
+//
+//void Print2(struct P* sp)
+//{
+//	printf("%d %c\n", sp->s.a, sp->s.c);//*(sp).a,*(sp).c
+//}
+//
+//int main()
+//{
+//	struct P p = { 5.5,{100,'b'},3.14f };
+//	
+//	return 0;
+//}
+//
+
+//#include <stdio.h>
+//#include <string.h>
+//#include <stdlib.h>
+//
+//// 函数声明
+//void reverseString(char* str);
+//
+//int main() {
+//    char* input;
+//    size_t length;
+//
+//    // 读取输入字符串
+//    printf("请输入一个字符串: ");
+//    // 使用 getline() 来读取包含空格的整行输入
+//    getline(&input, &length, stdin);
+//
+//    // 调用函数反转字符串
+//    reverseString(input);
+//
+//    // 输出反转后的字符串
+//    printf("反转后的字符串: %s\n", input);
+//
+//    // 释放动态分配的内存
+//    free(input);
+//
+//    return 0;
+//}
+
+// 反转字符串的函数实现
+//void reverseString(char* str) {
+//    int length = strlen(str);
+//    int start = 0;
+//    int end = length - 1;
+//    char temp;
+//
+//    // 交换字符直到中间位置
+//    while (start < end) {
+//        temp = str[start];
+//        str[start] = str[end];
+//        str[end] = temp;
+//        start++;
+//        end--;
+//    }
+//}
+//#include <stdio.h>
+//#include <string.h>
+//#include <stdbool.h>
+//
+//// 函数声明
+//int findFirstUniqueChar(const char* str);
+//
+//int main() {
+//    const char* testStr = "leetcode";
+//    int position = findFirstUniqueChar(testStr);
+//    printf("第一个只出现一次的字符的位置是: %d\n", position);
+//
+//    const char* testStr2 = "loveleetcode";
+//    position = findFirstUniqueChar(testStr2);
+//    printf("第一个只出现一次的字符的位置是: %d\n", position);
+//
+//    const char* testStr3 = "aabbccddeeff";
+//    position = findFirstUniqueChar(testStr3);
+//    printf("第一个只出现一次的字符的位置是: %d\n", position);
+//
+//    return 0;
+//}
+//
+//// 找到第一个只出现一次的字符并返回其位置的函数实现
+//int findFirstUniqueChar(const char* str) {
+//    if (str == NULL || *str == '\0') {
+//        return 1; // 如果字符串为空，则返回1
+//    }
+//
+//    int charCount[256] = { 0 }; // 用于记录每个字符出现的次数，假设只处理ASCII字符
+//    int length = strlen(str);
+//
+//    // 统计每个字符出现的次数
+//    for (int i = 0; i < length; i++) {
+//        charCount[(unsigned char)str[i]]++;
+//    }
+//
+//    // 查找第一个只出现一次的字符
+//    for (int i = 0; i < length; i++) {
+//        if (charCount[(unsigned char)str[i]] == 1) {
+//            return i; // 返回第一个只出现一次的字符的位置
+//        }
+//    }
+//
+//    return 1; // 如果没有找到只出现一次的字符，则返回1
+//}
+
+
+//#include <stdio.h>
+
+// 函数声明
+//int singleNumber(int* nums, int numsSize);
+//
+//int main() {
+//    int nums[] = { 4, 1, 2, 1, 2 };
+//    int numsSize = sizeof(nums) / sizeof(nums[0]);
+//    int result = singleNumber(nums, numsSize);
+//    printf("只出现一次的数是: %d\n", result);
+//
+//    return 0;
+//}
+//
+//// 找出只出现一次的数的函数实现
+//int singleNumber(int* nums, int numsSize) {
+//    int result = 0;
+//    for (int i = 0; i < numsSize; i++) {
+//        result ^= nums[i]; // 对每个元素进行异或运算
+//    }
+//    return result; // 返回只出现一次的数
+//}
+
+//#include <stdio.h>
+//#include <stdlib.h>
+//
+//// 函数声明
+//int* mergeSortedArrays(int* A, int m, int* B, int n, int* mergedSize);
+//
+//int main() {
+//    int A[] = { 1, 3, 5, 7 };
+//    int B[] = { 2, 4, 6, 8 };
+//    int m = sizeof(A) / sizeof(A[0]);
+//    int n = sizeof(B) / sizeof(B[0]);
+//    int mergedSize = m + n;
+//
+//    // 分配足够的内存来存储合并后的数组
+//    int* mergedArray = (int*)malloc(mergedSize * sizeof(int));
+//    if (mergedArray == NULL) {
+//        fprintf(stderr, "内存分配失败\n");
+//        return 1;
+//    }
+//
+//    // 合并数组
+//    mergeSortedArrays(A, m, B, n, &mergedSize); // 注意：这里mergedSize是输出参数，但实际上我们不需要修改它的大小
+//
+//    // 输出合并后的数组
+//    printf("合并后的有序数组: ");
+//    for (int i = 0; i < mergedSize; i++) {
+//        printf("%d ", mergedArray[i]);
+//    }
+//    printf("\n");
+//
+//    // 释放分配的内存
+//    free(mergedArray);
+//
+//    return 0;
+//}
+//
+//// 合并两个已排序数组的函数实现
+//int* mergeSortedArrays(int* A, int m, int* B, int n, int* mergedSize) {
+//    int* mergedArray = (int*)malloc((*mergedSize) * sizeof(int));
+//    if (mergedArray == NULL) {
+//        fprintf(stderr, "内存分配失败\n");
+//        exit(1);
+//    }
+//
+//    int i = 0, j = 0, k = 0;
+//    while (i < m && j < n) {
+//        if (A[i] <= B[j]) {
+//            mergedArray[k++] = A[i++];
+//        }
+//        else {
+//            mergedArray[k++] = B[j++];
+//        }
+//    }
+//
+//    // 将剩余的元素（如果有的话）添加到合并后的数组中
+//    while (i < m) {
+//        mergedArray[k++] = A[i++];
+//    }
+//    while (j < n) {
+//        mergedArray[k++] = B[j++];
+//    }
+//
+//    // 实际上，我们不需要修改mergedSize，因为它在调用时已经正确设置为m+n
+//    // 但为了符合函数签名，我们还是通过指针传递了它（尽管这里没有用到它的修改功能）
+//    // *mergedSize = k; // 如果需要，可以取消注释这行代码来验证mergedSize的值
+//
+//    return mergedArray;
+//}
+//#include <stdio.h>
+//
+//void Print(int* arr)
+//{
+//	int i = 0;
+//	while (i<10)
+//	{
+//		printf("%d ", *(arr+i));
+//		++i;
+//	}
+//}
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8,9,10 };
+//	Print(arr);
+//	return 0;
+//}
+
+//打印菱形
+//#include<stdio.h>
+//int main()
+//{
+//	int i = 0;
+//	int j = 6;
+//	char arr[13][13];
+//	for (int v = 0; v < 13; v++)
+//	{
+//		for (int n = 0; n < 13; n++)
+//		{
+//			arr[v][n] = ' ';
+//		}
+//		
+//	}
+//
+//	for (int i = 0; i < 7; i++)
+//	{
+//		for (int e = 0; e <=i; e++)
+//		{
+//			arr[i][j + e] = '*';
+//			arr[i][j - e] = '*';
+//		}
+//	}//上三角
+//
+//	for (int c = 0; c <6; c++)
+//	{
+//		for (int t = 0; t <6-c; t++)
+//		{
+//			arr[7+c][j + t] = '*';
+//			arr[7+c][j - t] = '*';
+//		}
+//	}
+//
+//	for (int a = 0; a < 13; a++)
+//	{
+//		for (int b = 0; b < 13; b++)
+//		{
+//			printf("%c", arr[a][b]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+//水仙花
+//#include <stdio.h>
+//
+//int Length(long int num)
+//{
+//	int count = 0;
+//	while (num)
+//	{
+//		if (num <= 0)
+//			break;
+//		else
+//		{
+//			num = num / 10;
+//			++count;
+//		}
+//	}
+//	return count;
+//}
+//
+//int Root(long int x,int index)
+//{
+//	int x1 = 1;
+//	while (index)
+//	{
+//		if (index <1)
+//			break;
+//		else
+//		{
+//
+//			x1*=x;
+//			--index;
+//		}
+//	}
+//	return x1;
+//}
+//
+//void Print(long int num,int size)
+//{
+//	long int num3 = num;
+//	long int num1 = 0;
+//	long int sum = 0;
+//	for (int i = 0; i < size; i++)
+//	{
+//		int ret = 0;
+//		num1 = num % 10;
+//		ret = Root(num1, size);
+//		sum += ret;
+//		num = num / 10;
+//	}
+//	if (sum == num3)
+//	{
+//		printf("%ld ", num3);
+//	}
+//}
+//
+//int main()
+//{
+//	long int num=0;
+//	for (num= 1; num < 100001; num++)
+//	{
+//		int size = 0;
+//		size=Length(num);
+//		Print(num, size);
+//	}
+//	return 0;
+//}
+
+//sum=n+nn+nnn+nnnn....
+//#include<stdio.h>
+//#define _CRT_SECURE_NO_WARNINGS
+//void Print(int n,int m)
+//{
+//	long int sum = 0;
+//	long int num = 0;
+//	num = n;
+//	while (m > 0)
+//	{
+//		sum += n;
+//		n *= 10;
+//		n += num;
+//		--m;
+//		/*printf("%d ", n);*/
+//		
+//	}
+//	printf("%d ", sum);
+//}
+//
+//int main()
+//{
+//	while (1)
+//	{
+//		int a = 0;
+//		int x = 0;
+//		scanf_s("%d %d", &a, &x);
+//		Print(a, x);
+//	}
+//	
+//	return 0;
+//}

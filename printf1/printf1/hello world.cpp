@@ -2119,15 +2119,63 @@
 //	return 0;
 //}
 
-#include<stdio.h>
-
-int main()
-{
-	int fullbottle = 0;
-	int emptybottle = 0;
-	int money = 20;
-	int num = 0;
-	num = (money / 1)+(money / 1) / 2;
-	printf("%d\n", num);
-	return num;
-}
+//#include<stdio.h>
+//
+//int main()
+//{
+//	int fullbottle = 0;
+//	int emptybottle = 0;
+//	int money = 20;
+//	int num = 0;
+//	num = (money / 1)+(money / 1) / 2;
+//	printf("%d\n", num);
+//	return num;
+//}
+// 
+//一个数组里面排序后左边都是奇数，后面都是偶数
+//#include <stdio.h>
+//
+//int Change(int arr[],int n)
+//{
+//	
+//	int left = 0;
+//	int right = n-1;
+//	
+//	while (left < right)
+//	{
+//		int num = 0;
+//		while ((left<right)&&(arr[left] % 2 == 1))
+//		{
+//			left++;
+//		}
+//		while ((left < right) && (arr[right] % 2 == 0)) 
+//		{
+//			right--;
+//		}
+//		if(left<right)
+//		{
+//			num = arr[right];
+//			arr[right] = arr[left];
+//			arr[left] = num;
+//			left++;
+//			right--;
+//		}
+//	}
+//	return 0;
+//}
+//
+//int main()
+//{
+//	int shu[10] = { 0 };
+//	int n = sizeof(shu) / sizeof(shu[0]);
+//	for (int i = 0; i < n; i++)
+//	{
+//		scanf_s("%d", &shu[i]);
+//	}
+//	Change(shu,n);
+//	for (int i = 0; i < n; i++)
+//	{
+//		printf("%d ",shu[i]);
+//	}
+//	return 0;
+//}

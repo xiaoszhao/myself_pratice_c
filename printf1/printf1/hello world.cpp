@@ -2179,3 +2179,75 @@
 //	}
 //	return 0;
 //}
+
+//实现strcpy功能
+//#include<stdio.h>
+//
+//void MY_strcpy(char* arr, const char* arr1)
+//{
+//	int n = sizeof(arr1) / sizeof(arr[0]);
+//	for (int i = 0; i < n; i++)
+//	{
+//		arr[i] = arr1[i];
+//	}
+//}
+//
+//
+//int main()
+//{
+//	char arr[] = "adc";
+//	char arr1[]="";
+//	MY_strcpy(arr1, arr);
+//	printf("%s", arr1);
+//	return 0;
+//}
+
+//实现strlen功能
+//#include <stdio.h>
+//#include<string.h>
+//
+//size_t MY_strlen(const char* arr)
+//{
+//	return sizeof(arr) / sizeof(arr[0]);
+//
+//}
+//int main()
+//{
+//	char arr[] = { 0 };
+//	scanf_s("%c", &arr);
+//	printf("%d", MY_strlen(arr));
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 20;
+//	int b = -10;
+//	return 0;
+//}
+
+//判断大小端问题
+
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 1;              //0x00 00 00 01
+//	char* p = (char*)&a;    //0x01 00 00 00或是0x00 00 00 01
+//	if (1==*p)
+//	{
+//		printf("小端");
+//	}
+//	else
+//		printf("大端");
+//	return 0;
+//}
+//
+
+#include<stdio.h>
+int main()
+{
+	int a = 9;
+	printf("%f", a);
+	return 0;
+}

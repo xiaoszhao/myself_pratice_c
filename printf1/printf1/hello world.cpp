@@ -2244,10 +2244,152 @@
 //}
 //
 
+//#include<stdio.h>
+//int main()
+//{
+//	int a = 9;
+//	printf("%f", a);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	char a = 'w';
+//	char* b = &a；//字符指针变量
+//	*b = 'w';
+//	return 0;
+//} 
+
+//#include<stdio.h>
+//int main()
+//{
+//	const char* pc = "hello";
+//	printf("%s\n", pc);
+//	return 0;
+//}
+
+//指针数组
+//#include<stdio.h>
+//int main()
+//{
+//	const char* arr[4] = { "abc","edf","ghi","mno" };//存放字符指针的数组
+//	int i = 0;
+//	for (i = 0; i < 4; i++)
+//	{
+//		printf("%s\n", arr[i]);
+//	}
+//	return 0;
+//}
+//用指针数组来模拟二维数组
+//#include<stdio.h>
+//int main()
+//{
+//	int arr1[4] = { 1,2,3,4 };
+//	int arr2[4] = { 2,3,4,5 };
+//	int arr3[4] = { 6,7,8,9 };
+//	int arr4[4] = { 0,0,0,0 };
+//
+//	int* arr[4] = { arr1,arr2,arr3,arr4 };
+//	int i = 0;
+//	for (i = 0; i < 4; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j < 4; j++)
+//		{
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10];
+//	int (*pa)[10] = &arr;
+//	return 0;
+//}
+
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10] = { 1,2,3,4,5,6,7,8,9,10 };
+//	printf("%p\n", arr);
+//	printf("%p\n", arr+1);
+//
+//	printf("%p\n", &arr[0]);
+//	printf("%p\n", &arr[0]+1);
+//
+//	printf("%p\n", &arr);
+//	printf("%p\n", &arr+1);
+//	return 0;
+//}
+
+//数组指针访问二维数组
+
+//#include<stdio.h>
+//
+//void print(int(*p)[4], int a, int b)
+//{
+//	int i = 0;
+//	for (i = 0; i < a; i++)
+//	{
+//		int k = 0;
+//		for (k = 0; k < b; k++)
+//		{
+//			printf("%d ", (*(p + i))[k]);
+//		}
+//		printf("\n");
+//	}
+//}
+//int main()
+//{
+//	int arr[3][4] = { {1,2,3,4},{5,6,7,8},{9,10,11,12} };
+//	print(arr, 3, 4);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//void test(int arr[]){}
+//void test(int arr[10]){}
+//void test(int *arr){}
+//void test2(int *arr[20]){}
+//void test2(int **arr[20]) {};
+//
+//
+//int main()
+//{
+//	int arr[10] = { 0 };
+//	int* arr1[20] = { 0 };
+//	test(arr);
+//	test2(arr1);
+//	return 0;
+//}
+
+//#include<stdio.h>
+//void test(int arr[3][5]) {}
+//void test(int arr[][5]){}
+//void test(int *arr) {}
+//void test(int* arr[5]){}
+//void test(int(*arr)[5]){}
+//void test(int **arr){}
+//
+//int main()
+//{
+//	int arr[3][5] = { 0 };
+//	test(arr);
+//}
+
 #include<stdio.h>
+int Add(int x, int y)
+{
+	return x + y;
+}
 int main()
 {
-	int a = 9;
-	printf("%f", a);
+	int(*pc)(int, int) = &Add;
+	printf("%p", pc);
 	return 0;
 }

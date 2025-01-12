@@ -2382,14 +2382,227 @@
 //	test(arr);
 //}
 
+//#include<stdio.h>
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//int main()
+//{
+//	int(*pc)(int, int) = &Add;
+//	printf("%p", pc);
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include<stdio.h>
+//
+//int my_strlen(const char* str)
+//{
+//	return 0;
+//}
+//
+//
+//int main()
+//{
+//	//数组指针
+//	int arr[10] = { 0 };
+//	int(*pa)[10] = &arr;
+//	//指针数组
+//	char* ch[5];
+//	//函数指针
+//	int(*str)(const char*) = &my_strlen;
+//	return 0;
+//}
+
+//计算器函数指针数组
+//#define _CRT_SECURE_NO_WARNINGS 1
+//#include<stdio.h>
+//void menu()
+//{
+//	printf("********************************************\n");
+//	printf("*********** 1.add         2.sub  ***********\n");
+//	printf("***********                      ***********\n");
+//	printf("*********** 3.mul         4.div  ***********\n");
+//	printf("***********       0.exit         ***********\n");
+//	printf("********************************************\n");
+//
+//}
+//
+//int Add(int x, int y)
+//{
+//	return x + y;
+//}
+//
+//int Sub(int x, int y)
+//{
+//	return x - y;
+//}
+//
+//int Mul(int x, int y)
+//{
+//	return x * y;
+//}
+//
+//int Div(int x, int y)
+//{
+//	return x / y;
+//}
+//
+////函数指针数组
+//int (*pf[5])(int,int) = { NULL,Add,Sub,Mul,Div };
+//
+//int main()
+//{
+//	int input = 0;
+//	int x = 0;
+//	int y = 0;
+//	int ret = 0;
+//	do
+//	{
+//		menu();
+//		printf("请选择：>");
+//		scanf("%d", &input);
+//		if (input == 0)
+//		{
+//			printf("退出计算器\n");
+//			break;
+//		}
+//		else if (input >= 1 && input <= 4)
+//		{
+//			printf("请输入两个数:>");
+//			scanf("%d %d", &x, &y);
+//			ret = pf[input](x, y);
+//			printf("结果是： %d\n", ret);
+//		}
+//		else
+//		{
+//			printf("选择错误\n");
+//		}
+//	} while (input);
+//	return 0;
+//}
+
+
+//基于快速排序的stdlib库里的qsort进行排序
+
+//#include<stdio.h>
+//#include<stdlib.h>
+//
+//int comper(const void*e1, const void*e2)
+//{
+//	return *(int*)e1 - *(int*)e2;
+//}
+//
+//int main()
+//{
+//	int arr[5] = { 4,6,2,3,1 };
+//	int sz = sizeof(arr) / sizeof(arr[0]);
+//	qsort(arr, sz, sizeof(arr[0]), comper);
+//	for (int i = 0; i < sz; i++)
+//	{
+//		printf("%d ", arr[i]);
+//	}
+//	return 0;
+//}
+//
+////结构体排序
+//#include<stdio.h>
+//#include<string.h>
+//#include<stdlib.h>
+//struct Stu
+//{
+//	char name[20];
+//	int age;
+//};
+////年龄排序
+//int comper(const void* e1, const void* e2)
+//{
+//	return ((struct Stu*)e1)->age - ((struct Stu*)e2)->age;
+//}
+//
+////按照名字来排序
+//int comper1(const void* e1, const void* e2)
+//{
+//	return strcmp(((struct Stu*)e1)->name , ((struct Stu*)e2)->name) ;//按照字典序进行排序
+//}
+//
+//void test2()
+//{
+//	struct Stu s[3] = { {"zhangsan",30},{"lisi",50},{"wanghu",33} };
+//	int sz = sizeof(s) / sizeof(s[0]);
+//	qsort(s,sz,sizeof(s[0]),comper1);
+//	for (int i = 0; i < sz; i++)
+//	{
+//		printf("%s %d\n", s[i].name, s[i].age);
+//	}
+//}
+//
+//int main()
+//{
+//	test2();
+//	return 0;
+//}
+//杨辉三角
+//#include<stdio.h>
+//int main()
+//{
+//	int arr[10][10] = { 0 };
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j <=i; j++)
+//		{
+//			if (j == 0)
+//				arr[i][j] = 1;
+//			if(i==j)
+//				arr[i][j] = 1;
+//			if (i >= 2 && j >= 1)
+//			{
+//				arr[i][j] = arr[i - 1][j-1] + arr[i-1][j];
+//			}
+//		}
+//	}
+//	for (i = 0; i < 10; i++)
+//	{
+//		int j = 0;
+//		for (j = 0; j <=i; j++)
+//		{
+//			printf("%d ", arr[i][j]);
+//		}
+//		printf("\n");
+//	}
+//
+//}
+
 #include<stdio.h>
-int Add(int x, int y)
+#include<string.h>
+
+void left_move(char arr[], int k)
 {
-	return x + y;
+	int i = 0;
+	int len = strlen(arr);
+	for (i = 0; i < k; i++)
+	{
+		char tmp = arr[0];
+		int j = 0;
+		for (j = 0; j < len - 1; j++)
+		{
+			arr[j] = arr[j + 1];
+		}
+		arr[len - 1] = tmp;
+	}
 }
 int main()
 {
-	int(*pc)(int, int) = &Add;
-	printf("%p", pc);
+	char arr[] = "abcdef";
+	int k = 2;
+	left_move(arr, k);
+	printf("%s\n", arr);
 	return 0;
 }
+
+
+
+

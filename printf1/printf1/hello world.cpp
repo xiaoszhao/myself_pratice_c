@@ -2604,7 +2604,228 @@
 //	printf("%s\n", arr);
 //	return 0;
 //}
+
+
+//#include<stdio.h>
+//int main()
+//{
+//	const char* c[] = { "ENTER","NEW","POINT","FIRST" };
+//	const char** cp[] = { c + 3,c + 2,c + 1,c };
+//	const char*** cpp = cp;
+//
+//	printf("%s\n", **++cpp);
+//	printf("%s\n", *--* ++cpp+3);
+//	printf("%s\n", *cpp[-2] + 3);
+//	printf("%s\n", cpp[-1][-1] + 1);
+//	return 0;
+//}
+
+//
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+#include<string.h>
+#include<assert.h>
+//size_t my_strlen(const char* str)
+//{
+//	assert(str != NULL);
+//	int cout = 0;
+//	while(*str != '\0')
+//	{
+//		cout++;
+//		str++;
+//	}
+//	return cout;
+//}
+//递归
+//size_t my_strlen(const char* str)
+//{
+//	assert(str != NULL);
+//	if (*str != '\0')
+//		return 1 + my_strlen(str + 1);
+//	else
+//		return 0;
+//}
+////指针减去指针
+//size_t my_strlen(const char* str)
+//{
+//	const char* start = str;
+//	assert(str != NULL);
+//	while (*str)
+//	{
+//		str++;
+//	}
+//	return str - start;
+//}
+//
+//int main()
+//{
+//	char arr[] = "nihao";
+//	int len = my_strlen(arr);
+//	printf("%d\n", len);
+//	return 0;
+//}
+
+//char* my_strcpy(char* dest, const char* src)
+//{
+//	char* ret = dest;
+//	assert(dest && src);
+//	while (*dest++ = *src++) { ; }
+//	return ret;
+//}
+//
+//int main()
+//{
+//	char arr1[20] = "";
+//	char arr2[] = "ni aho";
+//	my_strcpy(arr1, arr2);
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+//char* my_strcat(char* dest, const char* src)
+//{
+//	assert(dest && src);
+//	char* ret = dest;
+//	while (*dest != '\0')
+//	{
+//		dest++;
+//	}
+//	while (*dest++ = *src++)
+//	{
+//		;
+//	}
+//	return ret;
+//}
+//
+//int main()
+//{
+//	char arr[20] = "ni";
+//	my_strcat(arr, "hao");
+//	printf("%s\n", arr);
+//	return 0;
+//}
+
+//int my_strcmp(const char* str1, const char* str2)
+//{
+//	assert(str1 && str2);
+//	while (*str1==*str2)
+//	{
+//		if (*str1 == '\0')
+//			return 0;
+//		str1++;
+//		str2++;
+//	}
+//	if (*str1 > *str2)
+//		return 1;
+//	else
+//		return -1;
+//}
+
+
+//int main()
+//{
+//	char arr1[] = "abcdef";
+//	char arr2[] = "ab";
+//	int ret = my_strcmp(arr1, arr2);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr1[20] = {0};
+//	strncpy(arr1, "abcdef",3);
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr1[20] ="eiie";
+//	strncat(arr1, "abcdef", 3);
+//	printf("%s\n", arr1);
+//	return 0;
+//}
+//int main()
+//{
+//	const char* arr1 = "abcdef";
+//	const char* arr2 = "abcdef";
+//	int ret = strncmp(arr1,arr2,3);
+//	printf("%d\n", ret);
+//	return 0;
+//}
+
+//const char* my_strstr(const char* str1, const char* str2)
+//{
+//	assert(str1 && str2);
+//	if (*str2 == '\0')
+//		return str1;
+//	const char* s1 = str1;
+//	const char* s2 = str2;
+//	const char* s = str1;
+//
+//	while (*s)
+//	{
+//		s1 = s;
+//		s2 = str2;
+//		while (*s1 !='\0'&& *s2 != '\0'&& * s1 == *s2)
+//		{
+//			s1++;
+//			s2++;
+//		}
+//		if (*s2 == '\0')
+//		{
+//			return s;
+//		}
+//		s++;
+//	}
+//	return NULL;
+//}
 //
 //
+
+//int main()
+//{
+//	char arr1[] = "ababcdef"; 
+//	char arr2[] = "ab";
+//	const char* ret =my_strstr(arr1, arr2);
+//	if (ret == NULL)
+//	{
+//		printf("找不到\n");
+//	}
+//	else
+//	{
+//		printf("%s", ret);
+//	}
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	char arr1[] = "aba&bc@de.f";
+//	const char* p = "&@.";
+//	char* a=strtok(arr1, p);
+//	printf("%s\n", a);
 //
+//	a = strtok(NULL, p);
+//	printf("%s\n", a);
+//	
+//	return 0;
+//}
+
+//int main()
+//{
+//	char arr1[] = "aba&bc@de.f";
+//	const char* p = "&@.";
+//	char arr2[20] = { 0 };
+//	strcpy(arr2, arr1);
+//	char* ret = NULL;
+//	for (ret = strtok(arr2, p); ret != NULL;ret=strtok(NULL,p))
+//	{
+//		printf("%s\n", ret);
+//	}
+//	
 //
+//	return 0;

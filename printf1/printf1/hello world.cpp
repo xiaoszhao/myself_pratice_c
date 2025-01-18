@@ -2622,11 +2622,11 @@
 
 //
 
-#define _CRT_SECURE_NO_WARNINGS
-
-#include<stdio.h>
-#include<string.h>
-#include<assert.h>
+//#define _CRT_SECURE_NO_WARNINGS
+//
+//#include<stdio.h>
+//#include<string.h>
+//#include<assert.h>
 //size_t my_strlen(const char* str)
 //{
 //	assert(str != NULL);
@@ -2829,3 +2829,275 @@
 //	
 //
 //	return 0;
+//#define _CRT_SECURE_NO_WARNINGS
+//
+//#include<stdio.h>
+//#include<string.h>
+//#include<assert.h>
+
+//int main()
+//{
+//	printf("%s\n", strerror(0));
+//	printf("%s\n", strerror(1));
+//	printf("%s\n", strerror(2));
+//	printf("%s\n", strerror(3));
+//	printf("%s\n", strerror(4));
+//	printf("%s\n", strerror(5));
+//	return 0;
+//}
+
+//#include<errno.h>
+//int main()
+//{
+//	FILE* f = fopen("test.c", "r");
+//	if (f == NULL)
+//	{
+//		/*printf("%s\n", strerror(errno));*/
+//		perror("fopen");
+//		return 1;
+//	}
+//	fclose(f);
+//	f = NULL;
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8 };
+//	int arr1[10] = { 0 };
+//	memcpy(arr1, arr, 12);
+//	return 0;
+//}
+
+
+//void* my_memcpy(void* des,const void* src,size_t num)
+//{
+//	void* ret = des;
+//	assert(des && src);
+//	while (num--)
+//	{
+//		*(char*)des = *(char*)src;
+//		des = (char*)des + 1;
+//		src = (char*)src + 1;
+//	}
+//	return des;
+//}
+
+
+//void test1()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8 };
+//	int arr1[10] = { 0 };
+//	my_memcpy(arr1, arr, 12);
+//}
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8 };
+//	int arr1[10] = { 0 };
+//	memmove(arr+2, arr, 12);
+//	return 0;
+//}
+
+
+//void* my_memmove(void* dest, const void* src, size_t num)
+//{
+//	assert(dest && src);
+//	void* ret = dest;
+//	if (dest < src)//在原始数据前面
+//	{
+//		while (num--)
+//		{
+//			*(char*)dest = *(char*)src;//从前往后走，强制类型转换
+//			dest = (char*)dest + 1;
+//			src = (char*)src + 1;
+//		}
+//	}
+//	else
+//	{
+//		while (num--)
+//		{
+//			*((char*)dest + num) = *((char*)src + num);
+//		}
+//	}
+//	return ret;
+//}
+//
+//int main()
+//{
+//	int arr[] = { 1,2,3,4,5,6,7,8 };
+//	int arr1[10] = { 0 };
+//	my_memmove(arr+2, arr, 12);
+//	return 0;
+//}
+
+//int main()
+//{
+//	int arr[] = { 1,2,4 };
+//	int arr1[] = { 1,2,6 };
+//	int ret = memcmp(arr, arr1, 4);
+//	int ret2 = memcmp(arr, arr1, 9);
+//	printf("%d\n", ret);
+//	printf("%d\n", ret2);
+//
+//}
+
+//int main()
+//{
+//	char arr[] = "nihaoaaaa";
+//	memset(arr, 'w', 4);
+//	printf("%s\n", arr);
+//	memset(arr + 5, 'y', 3);
+//	printf("%s\n", arr);
+//	return 0;
+//}
+//
+
+//int x = 5, y = 7;
+//void swap()
+//{
+//	int z;
+//	z = x;
+//	x = y;
+//	y = z;
+//} 
+//int main()
+//{
+//	int x = 3, y = 8;
+//	swap();
+//	printf("%d,%d\n",x, y);
+//	return 0;
+//}
+//
+
+
+//自定义函数
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+
+//struct Stu
+//{
+//	char name[20];
+//	int age;
+//	char ID[20];
+//}s1,s2;
+
+
+//typedef struct Stu
+//{
+//	char name[20];
+//	int age;
+//	char ID[20];
+//}Stu;
+//
+//int main()
+//{
+//	Stu s3, s4;
+//	return 0;
+//}
+
+
+//struct
+//{
+//	int a;
+//	char b;
+//}s1;
+
+//struct Node
+//{
+//	int data;
+//	struct Node* next;
+//};
+
+//typedef struct Node
+//{
+//	int data;
+//	struct Node* next;
+//};
+
+//struct Point
+//{
+//	int x;
+//	char y[20];
+//}s1 = {12,"abc"};
+//
+//struct Point s2 = {12,"abc"};
+//
+//
+//struct s
+//{
+//	int num;
+//	char ch;
+//	struct Point p;
+//	float d;
+//};
+//
+//int main()
+//{
+//	struct Point s3= { 12,"abc" };
+//	struct s a = { 100,'w',{ 12,"abc" } ,3.14f };
+//	struct s w = {};
+//	printf("%d %c %d %s %f", a.num, a.ch, a.p.x, a.p.y, a.d);
+//	return 0;
+//}
+
+//#include<stddef.h>
+//struct S1
+//{
+//	char c1;
+//	int c2;
+//	char c3;
+//};
+//
+//struct S2
+//{
+//	char c1;
+//	char c3;
+//	int c2;
+//};
+
+//int main()
+//{
+//	//printf("%d\n", sizeof(struct S1));//12
+//	//printf("%d\n", sizeof(struct S2));//8
+//	printf("%d\n", offsetof(struct S1,c1));
+//	printf("%d\n", offsetof(struct S1, c2));
+//	printf("%d\n", offsetof(struct S1, c3));
+//
+//
+//	return 0;
+//}
+
+//struct S3
+//{
+//	double a;
+//	char c;
+//	int b;
+//};
+//
+//struct S4
+//{
+//	char c1;
+//	struct S3 s3;
+//	double c2;
+//};
+
+//
+////VS默认是8
+////#pragma pack(4)
+//#pragma pack(1)
+//struct s1
+//{
+//	char c1;
+//	int i;
+//	char c2;
+//};
+//#pragma pack()
+//
+//int main()
+//{
+//	printf("%d\n", sizeof(struct s1));
+//	return 0;
+//}

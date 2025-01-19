@@ -2973,10 +2973,10 @@
 
 //自定义函数
 
-#define _CRT_SECURE_NO_WARNINGS
-
-#include<stdio.h>
-
+//#define _CRT_SECURE_NO_WARNINGS
+//
+//#include<stdio.h>
+//
 //struct Stu
 //{
 //	char name[20];
@@ -3099,5 +3099,113 @@
 //int main()
 //{
 //	printf("%d\n", sizeof(struct s1));
+//	return 0;
+//}
+
+
+#define _CRT_SECURE_NO_WARNINGS
+
+#include<stdio.h>
+
+//struct A{
+//    unsigned int a : 4;
+//    unsigned int b : 8;
+//    unsigned int c : 20;
+//};
+//
+//int main()
+//{
+//    printf("%d", sizeof(struct A));
+//}
+
+//struct A {
+//    int a : 2;
+//    int b : 5;
+//    int c : 10;
+//    int d : 30;
+//};
+//int main()
+//{
+//    printf("%d", sizeof(struct A));
+//    return 0;
+//}
+
+//struct S
+//{
+//	char a : 3;
+//	char b : 4;
+//	char c : 5;
+//	char d : 4;
+//};
+//
+//int main()
+//{
+//	struct S s = { 0 };
+//	s.a = 10;
+//	s.b = 12;
+//	s.c = 3;
+//	s.d = 4;
+//	printf("%d", sizeof(s));
+//	return 0;
+//}
+
+//枚举
+
+//enum Sex
+//{
+//	MALE=1,
+//	FEMALE=3,
+//	SECRET=4
+//};
+//
+//int main()
+//{
+//	enum Sex s;
+//	printf("%d\n", MALE);
+//	printf("%d\n", FEMALE);
+//	printf("%d\n", SECRET);
+//	return 0;
+//}
+
+//enum Color
+//{
+//	RED=1,
+//	GREEN=2,
+//	WHITE=3
+//};
+//
+//int main()
+//{
+//	enum Color c = RED;
+//	printf("%d", sizeof(c));
+//	return 0;
+//}
+
+//union UN
+//{
+//	char c;
+//	int i;
+//};
+//
+//int main()
+//{
+//	union UN n;
+//	printf("%d\n", sizeof(n));//4个字节
+//	printf("%p\n", &n);
+//	printf("%p\n", &(n.c));
+//	printf("%p\n", &(n.i));
+//	return 0;
+//}
+
+
+//union A
+//{
+//	char a[5];
+//	int n;
+//};
+//
+//int main()
+//{
+//	printf("%d\n", sizeof(union A));
 //	return 0;
 //}

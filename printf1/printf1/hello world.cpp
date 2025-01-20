@@ -3103,9 +3103,9 @@
 //}
 
 
-#define _CRT_SECURE_NO_WARNINGS
-
-#include<stdio.h>
+//#define _CRT_SECURE_NO_WARNINGS
+//
+//#include<stdio.h>
 
 //struct A{
 //    unsigned int a : 4;
@@ -3207,5 +3207,195 @@
 //int main()
 //{
 //	printf("%d\n", sizeof(union A));
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS
+//
+//#include<stdio.h>
+////#include<malloc.h>
+//#include<string.h>
+//#include<errno.h>
+//int main()
+//{
+//	//申请40个字节，来存10个指针
+//	int* p=(int*)malloc(40);
+//	if (p == NULL)
+//	{
+//		printf("%s\n", strerror(errno));
+//		return 1;
+//	}
+//	else
+//		printf("申请成功!!!\n");
+//	//存放数字
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		*(p + i) = i + 1;
+//	}
+//	//打印
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d ", *(p + i));
+//	}
+//
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdlib.h>
+#include<stdio.h>
+
+//int main()
+//{
+//	int* p=(int*)calloc(10, sizeof(int));
+//	if (NULL == p)
+//	{
+//		perror("calloc");
+//		return 1;
+//	}
+//	//使用 
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d", *(p + i));
+//	}
+//	//释放
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+
+//int main()
+//{
+//	//内存空间开辟
+//	int* p = (int*)malloc(5 * sizeof(int));
+//	if (p == NULL)
+//	{
+//		perror("malloc");
+//		return 1;
+//	}
+//	//内存的使用
+//	int i = 0;
+//	for (i = 0; i < 5; i++)
+//	{
+//		*(p + i) = 1;
+//	}
+//	//不够增加5个整形空间
+//	int* ptr=(int*)realloc(p, 10 * sizeof(int));//这里不能用p接收，应该用新的地址接收
+//	if (ptr != NULL)
+//	{
+//		p = ptr;
+//	}
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d", *(p + i));
+//	}
+//	//释放空间
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+//
+
+//int main()
+//{
+//	int* p = (int*)realloc(NULL, 40);
+//	return 0;
+//}
+
+/*int main()
+{
+	int* p = (int*)malloc(100);
+	int i = 0;
+	for (i = 0; i < 20; i++)
+	{
+		*(p + i) = 0;
+	}
+	return 0;
+}*/
+
+//int main()
+//{
+//	int* p = (int*)malloc(100);
+//	if (p == NULL)
+//	{
+//		return 1;
+//	}
+//	int i = 0;
+//	//越界访问了
+//	for (i = 0; i < 100; i++)
+//	{
+//		*(p + i) = 0;//p[i]=0;
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+
+////free释放错了，对非动态空间释放了
+//int main()
+//{
+//	int a = 10;//栈区
+//	int* p = &a;
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+
+
+//int main()
+//{
+//	int* p = (int*)malloc(100);
+//	if (p == NULL)
+//	{
+//		return 1;
+//	}
+//	int i = 0;
+//	for (i = 0; i < 25; i++)
+//	{
+//		*p = i;
+//		p++;//free没有指向起始位置，运行发生错误
+//	}
+//	free(p);
+//	p = NULL;
+//	return 0;
+//}
+
+//int main()
+//{
+//	int* p = (int*)malloc(100);
+//	if (p == NULL)
+//	{
+//		return 1;
+//	}
+//	//使用
+//	//释放
+//	free(p);
+//	p = NULL;
+//	//....
+//	free(p);
+//	return 0;
+//}
+
+//函数内部进行了malloc操作，返回了malloc开辟的空间起始位置，记得释放
+//int* test()
+//{
+//	int* p = (int*)malloc(100);
+//	if (p == NULL)
+//	{
+//		return 1;
+//	}
+//	return p;
+//
+//}
+//
+//int main()
+//{
+//	int* ptr=test();
+//	free(ptr);
+//	ptr = NULL;
 //	return 0;
 //}

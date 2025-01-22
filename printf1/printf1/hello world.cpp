@@ -3399,3 +3399,60 @@
 //	ptr = NULL;
 //	return 0;
 //}
+
+//struct S
+//{
+//	int n;
+//	char arr[];
+//	//char arr[0];//数组的大小是未知的-柔性数组成员
+//};
+//int main()
+//{
+//	/*printf("%d", sizeof(struct S));*/
+//	struct S* ps=(struct S*)malloc(sizeof(struct S) + 10 * sizeof(char));
+//	return 0;
+//}
+
+//struct S
+//{
+//	int n;
+//	char arr[];
+//};
+//int main()
+//{
+//	struct S* ps=(struct S*)malloc(sizeof(struct S) + 10 * sizeof(char));
+//	if (ps == NULL)
+//	{
+//		perror("malloc::");
+//		return 1;
+//	}
+//	ps->n = 10;
+//	int i = 0;
+//	for (i = 0; i < 10; i++)
+//	{
+//		ps->arr[i] = i + 1;
+//	}
+//	printf("%d \n", ps->n);
+//	for (i = 0; i < 10; i++)
+//	{
+//		printf("%d " ,ps->arr[i]);
+//	}
+//	printf("增加后：\n");
+//	//对内存增加
+//	struct S* pc = (struct S*)realloc(ps, sizeof(struct S)+30 * sizeof(char));
+//	if (pc == NULL)
+//	{
+//		perror("realloc::");
+//		return 1;
+//	}
+//	ps = pc;
+//	for (i = 0; i < 30; i++)
+//	{
+//		printf("%d ", ps->arr[i]);
+//	}
+//	free(pc);
+//	pc = NULL;
+//	free(ps);
+//	ps = NULL;
+//	return 0;
+//}

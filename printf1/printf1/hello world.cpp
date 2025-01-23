@@ -3244,9 +3244,9 @@
 //	return 0;
 //}
 
-#define _CRT_SECURE_NO_WARNINGS
+#/*define _CRT_SECURE_NO_WARNINGS
 #include<stdlib.h>
-#include<stdio.h>
+#include<stdio.h>*/
 
 //int main()
 //{
@@ -3456,3 +3456,67 @@
 //	ps = NULL;
 //	return 0;
 //}
+
+//文件处理
+
+#define _CRT_SECURE_NO_WARNINGS
+#include<stdio.h>
+int main()
+{
+	//打开文件
+	FILE* df = fopen("D:\\project\\text.txt","r");
+	if (df == NULL)
+	{
+		perror("FILE::");
+		return 1;
+	}
+	else
+	{
+		printf("访问成功！\n");
+	}
+	//读取字符
+	/*int j = 0;
+	j = fgetc(df);
+	printf("%c", j);
+	j = fgetc(df);
+	printf("%c", j);
+	j = fgetc(df);
+	printf("%c", j);*/
+
+	////输入字符
+	//char j = 'a';
+	//for (j = 'a'; j <= 'z'; j++)
+	//{
+	//	fputc(j, df);
+	//}
+	//输入字符串
+	//fputs("hello world\n", df);
+	//输出字符串
+//	char arr[20];
+//	fgets(arr, 5, df);
+//	printf("%s", arr);
+//
+//	//关闭文件
+//	int i=fclose(df);
+//	if (i == 0)
+//	{
+//		df = NULL;
+//		return 0;
+//	}
+//	else
+//		perror("fclose::");
+//	return 0;
+//}
+
+
+
+
+
+
+
+
+
+
+
+
+

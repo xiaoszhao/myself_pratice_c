@@ -3459,42 +3459,57 @@
 
 //文件处理
 
-#define _CRT_SECURE_NO_WARNINGS
-#include<stdio.h>
-int main()
-{
-	//打开文件
-	FILE* df = fopen("D:\\project\\text.txt","r");
-	if (df == NULL)
-	{
-		perror("FILE::");
-		return 1;
-	}
-	else
-	{
-		printf("访问成功！\n");
-	}
-	//读取字符
-	/*int j = 0;
-	j = fgetc(df);
-	printf("%c", j);
-	j = fgetc(df);
-	printf("%c", j);
-	j = fgetc(df);
-	printf("%c", j);*/
-
-	////输入字符
-	//char j = 'a';
-	//for (j = 'a'; j <= 'z'; j++)
-	//{
-	//	fputc(j, df);
-	//}
-	//输入字符串
-	//fputs("hello world\n", df);
-	//输出字符串
-//	char arr[20];
-//	fgets(arr, 5, df);
-//	printf("%s", arr);
+//#define _CRT_SECURE_NO_WARNINGS
+//#include<stdio.h>
+//
+//struct S {
+//	char name[20];
+//	int age;
+//	int Id;
+//};
+//
+//
+//
+//int main()
+//{
+//	//打开文件
+//	FILE* df = fopen("D:\\project\\text.txt", "r");
+//	if (df == NULL)
+//	{
+//		perror("FILE::");
+//		return 1;
+//	}
+//	else
+//	{
+//		printf("访问成功！\n");
+//	}
+//	//读取字符
+//	/*int j = 0;
+//	j = fgetc(df);
+//	printf("%c", j);
+//	j = fgetc(df);
+//	printf("%c", j);
+//	j = fgetc(df);
+//	printf("%c", j);*/
+//
+//	////输入字符
+//	//char j = 'a';
+//	//for (j = 'a'; j <= 'z'; j++)
+//	//{
+//	//	fputc(j, df);
+//	//}
+//	//输入字符串
+//	//fputs("hello world\n", df);
+//	//输出字符串
+////	char arr[20];
+////	fgets(arr, 5, df);
+////	printf("%s", arr);
+//	//格式化输入
+//	/*struct S s = { "zhangsan",14,12345 };
+//	fprintf(df,"%s %d %d\n",s.name,s.age,s.Id);*/
+//	struct S s = {0};
+//	fscanf(df, "%s %d %d\n", s.name, &(s.age), &(s.Id));
+//	printf("%s %d %d\n", s.name, s.age, s.Id);
 //
 //	//关闭文件
 //	int i=fclose(df);
@@ -3507,13 +3522,148 @@ int main()
 //		perror("fclose::");
 //	return 0;
 //}
+//
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//struct S {
+//	char name[20];
+//	int age;
+//	float score;
+//};
+//
+//int main()
+//{
+//	struct S s = { "李白",34,99.9 };
+//	//打开文件
+//	FILE* df = fopen("D:\\project\\text.txt", "wb");
+//	if (df == NULL)
+//	{
+//		perror("fopen::");
+//		return 1;
+//	}
+//	//二进制写入
+//	fwrite(&s, sizeof(struct S), 1, df);
+//	//关闭文件
+//	fclose(df);
+//	df = NULL;
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//struct S {
+//	char name[20];
+//	int age;
+//	float score;
+//};
+//
+//int main()
+//{
+//	struct S s = {0};
+//	//打开文件
+//	FILE* df = fopen("D:\\project\\text.txt", "rb");
+//	if (df == NULL)
+//	{
+//		perror("fopen::");
+//		return 1;
+//	}
+//	//二进制读取
+//	fread(&s, sizeof(struct S), 1, df);
+//	printf("%s %d %f\n", s.name, s.age, s.score);
+//	//关闭文件
+//	fclose(df);
+//	df = NULL;
+//	return 0;
+//}
 
 
 
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//struct S {
+//	char name[20];
+//	int age;
+//	float score;
+//};
+//
+//int main()
+//{
+//	struct S s = { 0 };
+//	fscanf(stdin, "%s %d %f", s.name,&(s.age), &(s.score));
+//	fprintf(stdout, "%s %d %f\n", s.name, s.age, s.score);
+//	return 0;
+//}
 
 
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//int main()
+//{
+//	
+//	int c=fgetc(stdin);
+//	fputc(c, stdout);
+//	return 0;
+//
+//}
 
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//struct S {
+//	char name[20];
+//	int age;
+//	float score;
+//};
+//
+//int main()
+//{
+//	struct S s = { "张三",39,99.99 };
+//	char arr[100] = { 0 };
+//	sprintf(arr, "%s %d %f", s.name, s.age, s.score);
+//	printf("%s\n", arr);
+//
+//	struct S s1 = {0};
+//	sscanf(arr, "%s %d %f", s1.name, &(s1.age), &(s1.score));
+//	printf("%s %d %f", s1.name, s1.age, s1.score);
+//
+//	return 0;
+//}
+//
 
+//fseek
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//int main()
+//{
+//	FILE* df = fopen("D:\\project\\text.txt", "r");
+//	if (NULL == df)
+//	{
+//		perror("fopen::");
+//		return 1;
+//	}
+//	int ch = 0;
+//	ch=fgetc(df);
+//	printf("%c\n", ch);
+//	ch = fgetc(df);
+//	printf("%c\n", ch);
+//	ch = fgetc(df);
+//	printf("%c\n", ch);
+//	fseek(df, -2, SEEK_CUR);
+//	ch = fgetc(df);
+//	printf("%c\n", ch);
+//	printf("%d\n", ftell(df));
+//	rewind(df);
+//	printf("%d\n", ftell(df));
+//
+//	fclose(df);
+//	df = NULL;
+//	return 0;
+//}
 
 
 

@@ -3665,8 +3665,211 @@
 //	return 0;
 //}
 
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <assert.h>
+//size_t my_strlen(char* arr1)
+//{
+//	assert(arr1 != NULL);
+//	int a = 0;
+//	while (*arr1 != '\0')
+//	{
+//		arr1++;
+//		a++;
+//	}
+//	return a;
+//}
+//
+//int main()
+//{
+//	char arr[20] = "hello world";
+//	int i=my_strlen(arr);
+//	printf("%d", i);
+//	return 0;
+//}
+
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <assert.h>
+//
+//void my_strcpy(char* arr1,char* arr2)
+//{
+//	assert(arr1 && arr2);
+//	/*while (*arr1 == '\0')
+//	{
+//		*arr1 = *arr2;
+//		arr1++;
+//		arr2++;
+//	}*/
+//
+//	while (*arr1++ = *arr2++)
+//	{
+//		;
+//	}
+//}
+//
+//int main()
+//{
+//	char arr[20] = {0};
+//	char arr1[20] = "hello world";
+//	my_strcpy(arr, arr1);
+//	printf("%s\n", arr);
+//	return 0;
+//}
 
 
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <assert.h>
+//
+//int my_strcmp(const char* arr1,const char* arr2)
+//{
+//	assert(arr1&&arr2);
+//	while (*arr1 == *arr2)
+//	{
+//		if (*arr1 == '\0')
+//			return 0;
+//		arr1++;
+//		arr2++;
+//	}
+//	if (*arr1>*arr2)
+//		return 1;
+//	else
+//		return -1;
+//}
+//
+//int main()
+//{
+//	char arr[20] ="hello worlda";
+//	char arr1[20] = "hello world";
+//	int i=my_strcmp(arr, arr1);
+//	printf("%d\n", i);
+//	return 0;
+//}
 
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <assert.h>
+//
+//void my_strcat(char* arr1,const char*arr2)
+//{
+//	assert(arr1 && arr2);
+//	while (*arr1 != '\0')
+//		arr1++;
+//	while (*arr1++ = *arr2++)
+//	{
+//			;
+//	}
+//}
+//
+//int main()
+//{
+//	char arr[40] = "hello worlda";
+//	char arr1[20] = "hello world";
+//	my_strcat(arr, arr1);
+//	printf("%s\n", arr);
+//	return 0;
+//}
 
+//#define _CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <assert.h>
+//
+//int my_strstr(const char* arr1,const char* arr2)
+//{
+//	assert(arr1 && arr2);
+//	const char* sz =arr2;
+//	while (*arr1 != '\0')
+//	{
+//		if(*arr1!=*arr2)
+//			arr1++;
+//		else
+//		{
+//			while (*arr1 == *arr2)
+//			{
+//				arr1++;
+//				arr2++;
+//			}
+//			if (*arr2 == '\0')
+//				return 1;
+//			arr2 = sz;
+//		}
+//	}
+//	return 0;
+//}
+//
+//int main()
+//{
+//	char arr[20] = "hello worlda";
+//	char arr1[20] = "llo wor";
+//	int i=my_strstr(arr, arr1);
+//	if (i == 1)
+//		printf("找到了");
+//	else
+//		printf("没有找到");
+//	return 0;
+//}
 
+//#define CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//
+//void* my_memcopy(void* destination, const void* source, size_t num)
+//{
+//	assert(destination&&source);
+//	char* ret = (char*)destination;
+//	while (num)
+//	{
+//		*(char*)ret = *(char*) source;
+//		ret = (char*)ret + 1;
+//		source = (char*)source + 1;
+//		num--;
+//	}	
+//	return ret;
+//}
+//
+//int main()
+//{
+//	char arr[20] = "0";
+//	char arr1[20] = "hello world";
+//	my_memcopy(arr, arr1, 5);
+//	printf("%s\n", arr);
+//	return 0;
+//}
+
+//#define CRT_SECURE_NO_WARNINGS
+//#include <stdio.h>
+//#include <assert.h>
+//
+//void* my_memmove(void* des, const void* sou, size_t num)
+//{
+//	assert(des && sou);
+//	char* ret = (char*)des;
+//	if (des < sou)
+//	{
+//		while (num--)
+//		{
+//			*(char*)des = *(char*)sou;
+//			des = (char*)des + 1;
+//			sou = (char*)sou + 1;
+//		}
+//	}
+//	else
+//	{
+//		while (num--)
+//		{
+//			*((char*)des + num) = *((char*)sou + num);
+//		}
+//	}
+//	return ret;
+//}
+//
+//
+//
+//int main()
+//{
+//	char arr[20] = "0";
+//	char arr1[20] = "hello world";
+//	my_memmove(arr1, arr1+6, 4);
+//	printf("%s\n", arr1);
+//	return 0;
+//}
